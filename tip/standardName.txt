@@ -1,0 +1,12 @@
+public String standardString(String s) {
+		return Character.toUpperCase(s.charAt(0)) + s.substring(1).toLowerCase();
+	}
+
+	public void standardName() {
+		String[] arr = this.name.split("\\s+");
+		String res = "";
+		for (String x : arr) {
+			res += standardString(x) + " ";
+		}
+		this.name = res.substring(0, res.length() - 1);
+	}
