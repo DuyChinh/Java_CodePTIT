@@ -1,0 +1,10 @@
+public String getSalary(double num) {
+		DecimalFormat de ;
+		if(num == (int)num) {
+			de = new DecimalFormat();
+		} else {
+			de = new DecimalFormat("#, ##0.00");
+		}
+		de.setGroupingUsed(false);
+		return de.format(num);
+	}
