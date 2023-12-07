@@ -84,11 +84,11 @@ public class RegistrationForm extends Application {
             String name = nameTextField.getText();
             String email = emailTextField.getText();
             String nameCourse = nameCourseTextField.getText();
-            String nameCourseId = nameCourseIdTextField.getText();
+         
 
             //Check field
              if (nameTextField.getText().isEmpty() || emailTextField.getText().isEmpty()
-                    || nameCourseTextField.getText().isEmpty() ||nameCourseIdTextField.getText().isEmpty()) {
+                    || nameCourseTextField.getText().isEmpty() ) {
                 showErrorMessage("Vui lòng điền đầy đủ thông tin!");
                 return;
             }
@@ -98,7 +98,7 @@ public class RegistrationForm extends Application {
             String filename = "student.csv";
             BufferedWriter writer = new BufferedWriter(new FileWriter(filename, true));
 
-            writer.write(name + "," + email + "," + nameCourseId+","+nameCourse);
+            writer.write(name + "," + email + ","+nameCourse);
             writer.newLine();
             writer.close();
 
